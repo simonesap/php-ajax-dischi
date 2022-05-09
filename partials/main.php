@@ -1,22 +1,39 @@
 
-<?php include __DIR__ . '../database.php'; ?>
+<?php include __DIR__ . '/../utility/database.php'; ?>
 
 
 
-<div style="height: 90vh;">
+<div class="bg-custom-dark-blue p-5">
 
-    <div id="card" class="container">
-        <ul class="reset_list">
-            <li class="m-2">
+    <div class="container">
+        
+        <ul class="reset_list row d-flex justify_center">
+            <?php 
+                foreach( $database as $db) {
+            ?>
+            <li class="m-3 pt-4 pb-5 col-3 text-white bg_custom_blue text-center">
+                
+                <img class="h-75 w-100" src="<?php echo $db['poster']; ?>" alt="">
+                <div class="text-uppercase p-2 fw-bold fs-5">
+                    <?php
+                        echo "<div>" . $db['title'] . "</div>";
+                    ?>  
+                </div>
+                <div>
+                    <?php
+                        echo "<div>" . $db['author'] . "</div>";
+                    ?>
+                </div>  
                 <?php
-
-                    foreach( $database as $db) {
-                        echo $db['title'];
-                    }
-
+                    echo "<div>" . $db['year'] . "</div>";
                 ?>
+                
             </li>
+            <?php 
+                }
+            ?>
         </ul>
+        
     </div>
 
 </div>

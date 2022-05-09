@@ -66,6 +66,10 @@ body {
     height: 90vh;
 }
 
+.h-100-vh {
+    height: 100vh;
+}
+
 /* Display */
 .d_flex {
     display: flex;
@@ -111,4 +115,8 @@ body {
 
 .reset_list {
     list-style-type: none;
+}
+
+#logo {
+    background-image: url('../img/logo-spotify.png');
 }

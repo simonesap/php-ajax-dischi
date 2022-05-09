@@ -22,11 +22,21 @@
 </head>
 <body>
 
-    <?php include __DIR__ . './partials/header.php' ?>
+    <header class="bg_custom_blue h-10-vh d-flex align_center ps-3">
 
-    <?php include __DIR__ . './partials/main.php' ?>
+        <img src="./assets/img/logo-spotify.png" alt="" style="width: 50px; height: 50px;">
 
-    <?php include __DIR__ . './partials/footer.php' ?>
+    </header>
+
+    <main>
+
+        <?php include __DIR__ . '/./partials/main.php' ?>
+
+        <div v-for="el in arrayApi">
+            {{el.title}}
+        </div>
+
+    </main>
     
     <!-- cdn Vue2 -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
@@ -35,7 +45,7 @@
     <!-- cdn Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- Javaascript main -->
-    <script src="../assets/js/main.js"></script>
+    <script src="./assets/js/main.js"></script>
 
 </body>
 </html>
