@@ -21,22 +21,49 @@
     <title>PHP-ajax-Dischi</title>
 </head>
 <body>
+    <div id="root">
 
-    <header class="bg_custom_blue h-10-vh d-flex align_center ps-3">
+        <header class="bg_custom_blue h-10-vh d-flex align_center ps-3">
 
-        <img src="./assets/img/logo-spotify.png" alt="" style="width: 50px; height: 50px;">
+            <img src="./assets/img/logo-spotify.png" alt="" style="width: 50px; height: 50px;">
 
-    </header>
+        </header>
 
-    <main>
+        <main class="bg-custom-dark-blue p-5">
 
-        <?php include __DIR__ . '/./partials/main.php' ?>
+            <?php include __DIR__ . '/./partials/main.php' ?>
 
-        <div v-for="el in arrayApi">
-            {{el.title}}
-        </div>
+            <!-- <div class="bg-custom-dark-blue p-5"> -->
 
-    </main>
+            <div class="container">
+                <h2 class="text-center text-white">Stampa in JS tramite api</h2>
+                
+                <ul class="reset_list row d-flex align-center justify_center">
+                    
+                    <li class="m-3 pt-4 pb-5 col-3 text-white bg_custom_blue text-center" v-for="el in arrayApi">
+                        
+                        <img class="h-75 w-100" :src="el.poster" alt="">
+                        <div class="text-uppercase p-2 fw-bold fs-5">
+                            {{el.title}} 
+                        </div>
+                        <div class="text-uppercase p-2 fw-bold fs-5">
+                            {{el.author}} 
+                        </div>
+                        <div class="text-uppercase p-2 fw-bold fs-5">
+                            {{el.year}} 
+                        </div>
+                        
+                    </li>
+            
+                </ul>
+                
+            </div>
+
+        </main>
+
+    </div>
+
+    
     
     <!-- cdn Vue2 -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>

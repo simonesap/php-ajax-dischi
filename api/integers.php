@@ -1,4 +1,4 @@
-<?php include __DIR__ . '../utility/database.php'; ?>
+<?php include __DIR__ . '/../utility/database.php'; ?>
 
 <?php
 
@@ -12,5 +12,6 @@ $risposta = [
 header( 'Content-Type: application/json');
 
 echo json_encode( $risposta);
+
 
 ?>

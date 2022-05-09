@@ -6,6 +6,7 @@
 <div class="bg-custom-dark-blue p-5">
 
     <div class="container">
+        <h2 class="text-center text-white">Stampa in PHP</h2>
         
         <ul class="reset_list row d-flex justify_center">
             <?php 
