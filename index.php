@@ -23,9 +23,14 @@
 <body>
     <div id="root">
 
-        <header class="bg_custom_blue h-10-vh d-flex align_center ps-3">
+        <header class="bg_custom_blue h-10-vh d-flex align_center justify_between ps-3">
 
             <img src="./assets/img/logo-spotify.png" alt="" style="width: 50px; height: 50px;">
+
+            <select v-model="genereSelezionato" @change="selectGenre" class="m-3">
+                <option value="">All</option>
+                <option value="genere" v-for="genere in generi">{{genere}}</option>
+            </select>
 
         </header>
 
@@ -46,10 +51,10 @@
                         <div class="text-uppercase p-2 fw-bold fs-5">
                             {{el.title}} 
                         </div>
-                        <div class="text-uppercase p-2 fw-bold fs-5">
+                        <div class="p-2">
                             {{el.author}} 
                         </div>
-                        <div class="text-uppercase p-2 fw-bold fs-5">
+                        <div class="p-2">
                             {{el.year}} 
                         </div>
                         
